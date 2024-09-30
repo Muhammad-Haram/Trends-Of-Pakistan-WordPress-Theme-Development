@@ -104,8 +104,8 @@ var swiper = new Swiper(".mySwiper", {
 
 // top carousel javascript
 
-const mainProgressBar = document.getElementsByClassName(
-  "progress-bar--primary .progress-bar__fill"
+const mainProgressBar = document.querySelector(
+  ".progress-bar--primary .progress-bar__fill"
 );
 const mainPosts = document.querySelectorAll(".main-post");
 const posts = document.querySelectorAll(".post");
@@ -121,7 +121,7 @@ function progress() {
   if (i === 100) {
     i = -5;
     // reset progress bar
-    currentPost.getElementsByClassName("progress-bar__fill").style.width = 0;
+    currentPost.querySelector(".progress-bar__fill").style.width = 0;
     mainProgressBar.style.width = 0;
     currentPost.classList.remove("post--active");
 
@@ -139,7 +139,7 @@ function progress() {
     currentMainPost = mainPosts[postIndex];
   } else {
     i++;
-    currentPost.getElementsByClassName("progress-bar__fill").style.width = `${i}%`;
+    currentPost.querySelector(".progress-bar__fill").style.width = `${i}%`;
     mainProgressBar.style.width = `${i}%`;
     currentPost.classList.add("post--active");
 
@@ -174,7 +174,7 @@ function disablePostsTemporarily() {
 function updatePosts() {
   // Reset all progress bars and classes
   posts.forEach((post) => {
-    post.getElementsByClassName("progress-bar__fill").style.width = 0;
+    post.querySelector(".progress-bar__fill").style.width = 0;
     post.classList.remove("post--active");
   });
 
@@ -187,7 +187,7 @@ function updatePosts() {
   currentPost = posts[postIndex];
   currentMainPost = mainPosts[postIndex];
 
-  currentPost.getElementsByClassName("progress-bar__fill").style.width = `${i}%`;
+  currentPost.querySelector(".progress-bar__fill").style.width = `${i}%`;
   mainProgressBar.style.width = `${i}%`;
   currentPost.classList.add("post--active");
 
