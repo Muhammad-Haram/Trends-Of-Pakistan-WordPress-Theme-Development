@@ -1,21 +1,21 @@
 @font-face {
   font-family: ClashDisplay;
-  src: url("/fonts/ClashDisplay-Semibold.ttf");
+  src: url("../fonts/ClashDisplay-Semibold.ttf");
 }
 
 @font-face {
   font-family: satoshi;
-  src: url("/fonts/Satoshi-Regular.ttf");
+  src: url("../fonts/Satoshi-Regular.ttf");
 }
 
 @font-face {
   font-family: satoshiBold;
-  src: url("/fonts/Satoshi-Bold.ttf");
+  src: url("../fonts/Satoshi-Bold.ttf");
 }
 
 @font-face {
   font-family: Panchang;
-  src: url("/fonts/Panchang-Extrabold.ttf");
+  src: url("../fonts/Panchang-Extrabold.ttf");
 }
 
 * {
