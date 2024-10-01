@@ -65,7 +65,7 @@ Topictext.forEach(function (ele) {
     cursor.style.height = "200px";
     cursor.style.borderRadius = "10px";
     cursor.style.backgroundImage = `url(${attr})`;
-    cursor.style.zIndex = 1;
+    cursor.style.zIndex = 5;
     // cursor.style.backgroundSize = "cover";
   });
 

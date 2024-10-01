@@ -2,8 +2,6 @@
 
     <?php get_template_part('includes/section', 'menu'); ?>
 
-    <div class="cursor"></div>
-
 <section class="top-carousel">
   <div class="carousel">
     <div class="progress-bar progress-bar--primary hide-on-desktop">

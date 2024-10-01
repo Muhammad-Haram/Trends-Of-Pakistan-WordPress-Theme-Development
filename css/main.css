@@ -112,7 +112,7 @@
   width: 70px;
 }
 
-.serachDiv {
+.searchDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,12 +133,12 @@
   font-family: satoshi;
 }
 
-.serachDiv .searchLogo {
+.searchDiv .searchLogo {
   display: flex;
   padding: 5px;
 }
 
-.serachDiv .searchLogo img {
+.searchDiv .searchLogo img {
   width: 20px;
 }
 
@@ -842,7 +842,7 @@ p {
     padding: 10px 30px;
   }
 
-  .serachDiv {
+  .searchDiv {
     height: 30px;
   }
 
@@ -1091,7 +1091,7 @@ p {
     gap: 20px;
   }
 
-  .serachDiv {
+  .searchDiv {
     height: 35px;
   }
 

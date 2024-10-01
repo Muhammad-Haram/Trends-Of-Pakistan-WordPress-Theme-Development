@@ -11,7 +11,7 @@
         </a>
       </div>
 
-      <div class="serachDiv cursor-color">
+      <div class="searchDiv cursor-color">
         <div class="searchLogo">
           <img class="cursor-color" src="<?= get_template_directory_uri().'/images/search.png'?>" alt="" />
 
@@ -47,8 +47,8 @@
 
       <div class="nav-links">
         <ul class="nav-links-ul">
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="">Trending News</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/sports.html">Sports</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/">Trending News</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/sports-page">Sports</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/health.html">Health</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/politics.html">politics</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/tech.html">Tech And Telecom</a>
@@ -57,7 +57,7 @@
               href="/entertainments.html">entertainment</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/education.html">education</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/business.html">Business</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/contact.html">Contact Us</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/contact-us">Contact Us</a></li>
 
         </ul>
       </div>
