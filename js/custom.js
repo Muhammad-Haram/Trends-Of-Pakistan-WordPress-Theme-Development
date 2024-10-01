@@ -8,17 +8,16 @@ let cursorColorWhite = document.querySelectorAll(".cursor-color-white");
 let cursorColorNone = document.querySelectorAll(".cursor-color-none");
 
 nav.addEventListener("click", () => {
-    if (nav) {
-        navInfo.classList.add("show");
-    }
+  if (nav) {
+    navInfo.classList.add("show");
+  }
 });
 
 closeBtn.addEventListener("click", () => {
-    if (closeBtn) {
-        navInfo.classList.remove("show");
-    }
-})
-
+  if (closeBtn) {
+    navInfo.classList.remove("show");
+  }
+});
 
 // cursor js
 
@@ -65,7 +64,7 @@ Topictext.forEach(function (ele) {
     cursor.style.height = "200px";
     cursor.style.borderRadius = "10px";
     cursor.style.backgroundImage = `url(${attr})`;
-    cursor.style.zIndex = 5;
+    cursor.style.zIndex = 1;
     // cursor.style.backgroundSize = "cover";
   });
 
@@ -78,11 +77,9 @@ Topictext.forEach(function (ele) {
   });
 });
 
-
 //swiper
 
 var swiper = new Swiper(".mySwiper", {
-  
   breakpoints: {
     500: {
       slidesPerView: 2,

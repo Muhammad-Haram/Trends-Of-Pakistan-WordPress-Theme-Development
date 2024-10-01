@@ -49,14 +49,14 @@
         <ul class="nav-links-ul">
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/">Trending News</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/sports-page">Sports</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/health.html">Health</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/politics.html">politics</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/tech.html">Tech And Telecom</a>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/health-page">Health</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/politics-page">politics</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/tech-and-telecom-page">Tech And Telecom</a>
           </li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor"
-              href="/entertainments.html">entertainment</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/education.html">education</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/business.html">Business</a></li>
+              href="/entertainments-page">entertainment</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/education-page">education</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/business-page">Business</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/contact-us">Contact Us</a></li>
 
         </ul>
