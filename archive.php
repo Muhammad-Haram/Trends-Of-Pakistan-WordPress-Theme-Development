@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
-    <?php get_template_part('includes/section', 'menu'); ?>
+<div>
+        <?php get_template_part('includes/section','archive'); ?>
+</div>
+
 
 <?php get_footer(); ?>
