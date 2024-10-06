@@ -1042,7 +1042,7 @@ p {
     width: 100%;
   }
 
-  .singlepost-content {
+  .singlepost-content h1 {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1364,7 +1364,7 @@ p {
     width: 100%;
   }
 
-  .sp-content-heading {
+  .singlepost-content h1 {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
