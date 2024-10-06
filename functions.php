@@ -26,4 +26,4 @@ add_action('wp_enqueue_scripts', 'load_js');
 
 // theme option 
 
-
+add_theme_support('post-thumbnails');

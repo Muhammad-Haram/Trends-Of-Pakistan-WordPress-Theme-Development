@@ -2,9 +2,6 @@
 
     <?php get_template_part('includes/section','menu'); ?>
 
-
-
-
     <main>
       <div class="singleposts-top">
         <div class="singleposts-heading">
@@ -16,19 +13,17 @@
 
             
         <p class="timeDate-category">
-
         <?php
-$categories = get_the_category();
-foreach ($categories as $cat):
-    if ($cat->name === 'Tending News') {
-        continue;
-    }
-    ?>
-    <a href="<?php echo get_category_link($cat); ?>">
-        <?php echo $cat->name; ?>
-    </a>
-<?php endforeach; ?>
-
+            $categories = get_the_category();
+            foreach ($categories as $cat):
+            if ($cat->name === 'Tending News') {
+            continue;
+            }
+            ?>
+           <a href="<?php echo get_category_link($cat); ?>">
+           <?php echo $cat->name; ?>
+           </a>
+        <?php endforeach; ?>
         </p>
 
             <p>|</p>
@@ -63,8 +58,14 @@ foreach ($categories as $cat):
       </div>
 
       <div class="singleposts-image">
-        <img src="assets/img/england-team.jpg.avif" alt="" />
-      </div>
+
+      <?php if(has_post_thumbnail()):?>
+
+<img class="page-article-img" src="<?php the_post_thumbnail_url();?>">
+
+<?php endif;?>
+
+    </div>
 
       <div class="singleposts-article">
         <div class="singlepost-content">

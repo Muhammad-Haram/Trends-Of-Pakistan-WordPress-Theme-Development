@@ -4,8 +4,13 @@
 
 
 <div class="page-article">
+    
+<?php if(has_post_thumbnail()):?>
 
-<img class="page-article-img" src="<?= get_template_directory_uri().'/images/england-team.jpg.avif'?>" alt="" />
+<img class="page-article-img" src="<?php the_post_thumbnail_url();?>">
+
+<?php endif;?>
+
 
   <div>
     <h1 class="page-article-title">
