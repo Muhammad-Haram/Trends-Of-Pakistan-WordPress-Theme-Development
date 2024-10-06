@@ -23,3 +23,7 @@ function load_js()
 	wp_enqueue_script('custom');
 }
 add_action('wp_enqueue_scripts', 'load_js');
+
+// theme option 
+
+

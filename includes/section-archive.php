@@ -17,7 +17,19 @@
     <p><a href="<?php the_permalink();?>">Read More</a></p>
     <div class="page-article-timeDate">
     <p class="page-article-cate">
-      <a class="page-article-cate-anchor" href="/sports.html">Sports</a>
+
+    <?php
+$categories = get_the_category();
+foreach ($categories as $cat):
+    if ($cat->name === 'Tending News') {
+        continue;
+    }
+    ?>
+    <a class="page-article-cate-anchor" href="<?php echo get_category_link($cat); ?>">
+        <?php echo $cat->name; ?>
+    </a>
+<?php endforeach; ?>
+
     </p>
     <p>|</p>
     <p><?php the_modified_date();?></p>
