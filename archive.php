@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
-<div>
-        <?php get_template_part('includes/section','archive'); ?>
-</div>
+    <?php get_template_part('includes/section','menu'); ?>
 
+    <?php get_template_part('includes/section','archive'); ?>
+
+    <?php previous_posts_link();?>
+    <?php next_posts_link();?>
 
 <?php get_footer(); ?>

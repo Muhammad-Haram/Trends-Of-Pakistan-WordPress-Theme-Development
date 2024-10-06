@@ -47,7 +47,7 @@
 
       <div class="nav-links">
         <ul class="nav-links-ul">
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/">Trending News</a></li>
+          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/category/tending-news/">Trending News</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/sports-page">Sports</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/health-page">Health</a></li>
           <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/politics-page">politics</a></li>

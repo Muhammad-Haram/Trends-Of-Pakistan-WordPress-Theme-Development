@@ -9,6 +9,11 @@
   height: 100%;
 }
 
+.test-div {
+  width: 100%;
+  overflow-x: scroll;
+}
+
 .swiper-slide {
   height: 400px !important;
   position: relative;
