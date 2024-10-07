@@ -3,13 +3,13 @@
 <?php if(have_posts() ): while(have_posts() ): the_post();?>
 
 
-<div class="page-article">
+<a class="post-link" href="<?php the_permalink();?>"> <div class="page-article">
     
-<?php if(has_post_thumbnail()):?>
+    <?php if(has_post_thumbnail()):?>
 
-<img class="page-article-img" src="<?php the_post_thumbnail_url();?>">
+    <img class="page-article-img" src="<?php the_post_thumbnail_url();?>">
 
-<?php endif;?>
+    <?php endif;?>
 
 
   <div>
@@ -19,13 +19,12 @@
     <p class="page-article-para">
     <?php echo substr(get_the_excerpt(),0,70) ?>
     </p>
-    <p><a href="<?php the_permalink();?>">Read More</a></p>
     <div class="page-article-timeDate">
     <p class="page-article-cate">
 
     <?php
-$categories = get_the_category();
-foreach ($categories as $cat):
+    $categories = get_the_category();
+    foreach ($categories as $cat):
     if ($cat->name === 'Tending News') {
         continue;
     }
@@ -33,7 +32,7 @@ foreach ($categories as $cat):
     <a class="page-article-cate-anchor" href="<?php echo get_category_link($cat); ?>">
         <?php echo $cat->name; ?>
     </a>
-<?php endforeach; ?>
+    <?php endforeach; ?>
 
     </p>
     <p>|</p>
@@ -43,7 +42,7 @@ foreach ($categories as $cat):
     </div>
   </div>
 
-</div>
+</div> </a>
 
 
 <?php endwhile; else: endif;?>
