@@ -587,7 +587,6 @@ footer {
 }
 
 .recentBox-cate {
-  padding: 10px;
   background-color: #000;
   padding: 4px 15px;
   border-radius: 50px;
@@ -605,6 +604,11 @@ footer {
   font-weight: 100;
   margin-bottom: 10px;
   padding: 0px 5px;
+}
+
+.recentBox-post-content-h1 a {
+  color: white;
+  text-decoration: none;
 }
 
 .recentBox-post-content-readMore {
@@ -716,7 +720,7 @@ footer {
   object-fit: cover;
 }
 
-.post-link{
+.post-link {
   color: #000;
   text-decoration: none;
 }
@@ -1364,7 +1368,7 @@ p {
   }
 
   .singleposts-article {
-    padding: 0px 10px;
+    padding: 0px 20px;
     display: block;
     gap: 0px;
   }

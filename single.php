@@ -76,131 +76,74 @@
 
         
       <div class="recentBox">
-        <div class="recentBox-2">
-          <div class="recentBox-search">
+           <div class="recentBox-2">
+        <div class="recentBox-search">
             <div class="recentBox-search-img">
-              <img src="/assets/img/search.png" alt="" />
+                <img src="/assets/img/search.png" alt="" />
             </div>
             <input type="search" placeholder="Search" />
-          </div>
+            <!-- <?php get_search_form();?> -->
+        </div>
 
-          <div class="recentBox-all">
+        <div class="recentBox-all">
             <h1 class="recentBox-para">Recent-news</h1>
             <a class="recentBox-viewAll" href="/">view all</a>
-          </div>
-
-          <div class="recentBox-posts">
-            <div class="recentBox-post">
-              <div class="recentBox-img">
-                <img class="recentBox-imgSrc" src="<?= get_template_directory_uri().'/images/babar.avif'?>" alt="" />
-
-
-                <div class="recentBox-gradient"></div>
-                <div class="recentBox-post-content">
-                  <div class="recentBox-cate">
-                    <a href="/" class="recentBox-cate-anchor">Sports</a>
-                  </div>
-                  <div class="recentBox-post-content-details">
-                    <h1 class="recentBox-post-content-h1">
-                      Babar Azam Reportedly Set to Lose White-Ball Captaincy
-                    </h1>
-                    <a href="/" class="recentBox-post-content-readMore"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="recentBox-post">
-              <div class="recentBox-img">
-                <img class="recentBox-imgSrc" src="<?= get_template_directory_uri().'/images/england-team.jpg.avif'?>" alt="" />
-
-                <div class="recentBox-gradient"></div>
-                <div class="recentBox-post-content">
-                  <div class="recentBox-cate">
-                    <a href="/" class="recentBox-cate-anchor">Sports</a>
-                  </div>
-                  <div class="recentBox-post-content-details">
-                    <h1 class="recentBox-post-content-h1">
-                      Here’s England’s Squad for Pakistan Test Series
-                    </h1>
-                    <a href="/" class="recentBox-post-content-readMore"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="recentBox-post">
-              <div class="recentBox-img">
-                <img class="recentBox-imgSrc" src="<?= get_template_directory_uri().'/images/bank img.jpg'?>" alt="" />
-                <div class="recentBox-gradient"></div>
-                <div class="recentBox-post-content">
-                  <div class="recentBox-cate">
-                    <a href="/" class="recentBox-cate-anchor">Business</a>
-                  </div>
-                  <div class="recentBox-post-content-details">
-                    <h1 class="recentBox-post-content-h1">
-                      Brokerage House Expects Further Cut in Policy Rate Next
-                      Week
-                    </h1>
-                    <a href="/" class="recentBox-post-content-readMore"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="recentBox-post">
-              <div class="recentBox-img">
-
-                <img class="recentBox-imgSrc" src="<?= get_template_directory_uri().'/images/books.avif'?>" alt="" />
-
-
-                <div class="recentBox-gradient"></div>
-                <div class="recentBox-post-content">
-                  <div class="recentBox-cate">
-                    <a href="/" class="recentBox-cate-anchor">Education</a>
-                  </div>
-                  <div class="recentBox-post-content-details">
-                    <h1 class="recentBox-post-content-h1">
-                      Punjab Makes Major Course Changes for Class 9 and Class 11
-                    </h1>
-                    <a href="/" class="recentBox-post-content-readMore"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="recentBox-post">
-              <div class="recentBox-img">
-
-                <img class="recentBox-imgSrc" src="<?= get_template_directory_uri().'/images/currency img.jpg'?>" alt="" />
-
-                <div class="recentBox-gradient"></div>
-                <div class="recentBox-post-content">
-                  <div class="recentBox-cate">
-                    <a href="/" class="recentBox-cate-anchor">Business</a>
-                  </div>
-                  <div class="recentBox-post-content-details">
-                    <h1 class="recentBox-post-content-h1">
-                      Remittances Sent by Overseas Pakistanis Remain Near $3
-                      Billion for Fourth Straight Month
-                    </h1>
-                    <a href="/" class="recentBox-post-content-readMore"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+
+        <div class="recentBox-posts">
+            <?php 
+                // The query for default posts
+                $the_query = new WP_Query( array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 4,
+                )); 
+            ?>
+
+            <?php if ( $the_query->have_posts() ) : ?>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <div class="recentBox-post">
+                        <div class="recentBox-img">
+                            <?php if ( has_post_thumbnail() ) : ?>
+                                <?php echo get_the_post_thumbnail(get_the_ID(), 'medium', array('class' => 'recentBox-imgSrc')); ?>
+                            <?php else : ?>
+                                <img class="recentBox-imgSrc" src="<?= get_template_directory_uri().'/images/default-image.jpg'?>" alt="" /> <!-- Fallback image -->
+                            <?php endif; ?>
+
+                            <div class="recentBox-gradient"></div>
+                            <div class="recentBox-post-content">
+
+                              <div class="recentBox-cate">
+                                <?php
+                                  $categories = get_the_category();
+                                  foreach ($categories as $cat):
+                                  if ($cat->name === 'Tending News') {
+                                      continue;
+                                  }
+                                  ?>
+                                  <a class="recentBox-cate-anchor" href="<?php echo get_category_link($cat); ?>">
+                                      <?php echo $cat->name; ?>
+                                  </a>
+
+                                <?php endforeach; ?>
+                              </div>
+
+                                <div class="recentBox-post-content-details">
+                                    <h1 class="recentBox-post-content-h1">
+                                        <a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </h1>
+                                    <a href="<?php echo get_the_permalink(); ?>" class="recentBox-post-content-readMore">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <p><?php _e('No News'); ?></p>
+            <?php endif; ?>
+
+            <?php wp_reset_postdata(); // Reset post data after custom query ?>
+        </div>
+           </div>
       </div>
 
       </div>
