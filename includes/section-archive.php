@@ -25,7 +25,7 @@
     <?php
     $categories = get_the_category();
     foreach ($categories as $cat):
-    if ($cat->name === 'Tending News') {
+    if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
         continue;
     }
     ?>
@@ -33,7 +33,7 @@
         <?php echo $cat->name; ?>
     </a>
     <?php endforeach; ?>
-
+    
     </p>
     <p>|</p>
     <p><?php the_modified_date();?></p>
@@ -87,18 +87,18 @@
                             <div class="recentBox-post-content">
 
                               <div class="recentBox-cate">
-                                <?php
-                                  $categories = get_the_category();
-                                  foreach ($categories as $cat):
-                                  if ($cat->name === 'Tending News') {
-                                      continue;
-                                  }
-                                  ?>
-                                  <a class="recentBox-cate-anchor" href="<?php echo get_category_link($cat); ?>">
-                                      <?php echo $cat->name; ?>
-                                  </a>
-
-                                <?php endforeach; ?>
+                            <?php
+                                   $categories = get_the_category();
+                                   foreach ($categories as $cat):
+                                       // Skip 'Tending News' and 'Top Slider' categories
+                                       if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
+                                           continue;
+                                       }
+                                       ?>
+                                       <a class="recentBox-cate-anchor" href="<?php echo get_category_link($cat); ?>">
+                                           <?php echo $cat->name; ?>
+                                       </a>
+                            <?php endforeach; ?>
                               </div>
 
                                 <div class="recentBox-post-content-details">

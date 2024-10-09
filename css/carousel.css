@@ -112,6 +112,11 @@ body {
   font-size: 20px;
 }
 
+.main-post__title a{
+  color: #fff;
+  text-decoration: none;
+}
+
 .main-post__link {
   text-decoration: none;
   color: #fff;
@@ -241,6 +246,11 @@ body {
   font-weight: 400;
   font-size: 0.95em;
   line-height: 1.5;
+}
+
+.post__title a{
+  color: #fff;
+  text-decoration: none;
 }
 
 .post--active {

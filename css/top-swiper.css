@@ -70,6 +70,11 @@
   font-weight: 100;
 }
 
+.swiper-news-heading h1 a{
+  color: #fff;
+  text-decoration: none;
+}
+
 .swiper-date {
   display: flex;
   gap: 10px;
