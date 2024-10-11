@@ -900,6 +900,26 @@ p {
   text-decoration: none;
 }
 
+.notfound-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.notfound-logo{
+  width: 50px;
+}
+
+.search-notfound {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600px;
+}
+
 /* cards container css end */
 
 /* responsive */

@@ -42,3 +42,11 @@ function my_sidebars()
 	);
 }
 add_action('widgets_init', 'my_sidebars');
+
+function search_only_posts($query) {
+    if ($query->is_search && !is_admin()) {
+        $query->set('post_type', 'post'); // Sirf posts dikhane ke liye
+    }
+    return $query;
+}
+add_action('pre_get_posts', 'search_only_posts');

@@ -16,9 +16,8 @@
           <img class="cursor-color" src="<?= get_template_directory_uri().'/images/search.png'?>" alt="" />
 
         </div>
-        <!-- <input class="searchbar" type="search" placeholder="search" /> -->
         <?php get_search_form();?>
-      </div>
+      </div>``
 
     </div>
 
