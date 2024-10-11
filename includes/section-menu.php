@@ -16,7 +16,8 @@
           <img class="cursor-color" src="<?= get_template_directory_uri().'/images/search.png'?>" alt="" />
 
         </div>
-        <input class="searchbar" type="search" placeholder="search" />
+        <!-- <input class="searchbar" type="search" placeholder="search" /> -->
+        <?php get_search_form();?>
       </div>
 
     </div>
@@ -46,18 +47,18 @@
       </div>
 
       <div class="nav-links">
+
         <ul class="nav-links-ul">
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/category/tending-news/">Trending News</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/sports-page">Sports</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/health-page">Health</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/politics-page">politics</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/tech-and-telecom-page">Tech And Telecom</a>
-          </li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor"
-              href="/entertainments-page">entertainment</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/education-page">education</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/business-page">Business</a></li>
-          <li class="nav-links-li"><a class="cursor-color nav-links-anchor" href="/contact-us">Contact Us</a></li>
+          <a class="cursor-color nav-links-anchor" href="/category/tending-news/"><li class="nav-links-li">Trending News</li></a>
+          <a class="cursor-color nav-links-anchor" href="/category/sports/"><li class="nav-links-li">Sports</li></a>
+          <a class="cursor-color nav-links-anchor" href="/category/health/"><li class="nav-links-li">Health</li></a>
+          <a class="cursor-color nav-links-anchor" href="/category/politics/"><li class="nav-links-li">politics</li></a>
+          <a class="cursor-color nav-links-anchor" href="/category/tech-and-telecom/"><li class="nav-links-li">Tech And Telecom
+          </li></a>
+          <a class="cursor-color nav-links-anchor" href="/category/entertainment/"><li class="nav-links-li">entertainment</li></a>
+          <a class="cursor-color nav-links-anchor" href="/category/education/"><li class="nav-links-li">education</li></a>
+          <a class="cursor-color nav-links-anchor" href="/category/business/"><li class="nav-links-li">Business</li></a>
+          <a class="cursor-color nav-links-anchor" href="/contact-us"><li class="nav-links-li">Contact Us</li></a>
 
         </ul>
       </div>
