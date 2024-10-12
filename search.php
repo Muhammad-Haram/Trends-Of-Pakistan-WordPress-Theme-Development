@@ -2,26 +2,37 @@
 
 <?php get_template_part('includes/section', 'menu'); ?>
 
-<div class="main-search-blog">
     <?php if (have_posts()): ?>
         <div class="search-results">
             <?php while (have_posts()): the_post(); ?>
-                <div <?php post_class('blog-post'); ?>>
-                    <div class="text-center listing-div px-0">
-                    </div>
-                    <div class="blog-excerpt">
-                        <div>
-                            <p class="blog-date"><?php the_modified_date(); ?></p>
-                            <h1 class="dark-header mt-2"><?php the_time(); ?></h1>
-                            <h1 class="blog-title"><?php the_title(); ?></h1>
+
+                <div class="single-result" <?php post_class('blog-post'); ?>>
+
+                    <div class="blog-box">
+                            
+
+                        <div class="blog-box-result">
+                            <div class="blog-box-title">
+                                <a href="<?php echo get_the_permalink(); ?>" class="search-blog-links"><?php the_title(); ?></a>
+                            </div>
+                            <p class="blog-short-para"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+
+                            <div class="date-time">
+                                <p><?php the_time();?></p>
+                                <p>|</p>
+                                <p><?php the_modified_date();?></p>
+                            </div>
+
                         </div>
-                        
-                        <div class="blog-box">
-                            <a href="<?php echo get_the_permalink(); ?>" class="search-blog-links"><?php the_title(); ?></a>
-                            <p class="blog-short-para"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
+
+                        <div class="blog-box-img">
+                           <img src="<?php the_post_thumbnail_url();?>">
                         </div>
+
                     </div>
+
                 </div>
+
             <?php endwhile; ?>
             <div class="pagination">
                 <?php previous_posts_link('« Previous'); ?>
@@ -34,8 +45,9 @@
         <p class="search-notfound"><?php the_search_query(); ?> : Not found</p>
         </div>
     <?php endif; ?>
-</div>
+
 
 <!-- Footer -->
 <?php get_template_part('includes/section', 'footer'); ?>
 <?php get_footer(); ?>
+ 
