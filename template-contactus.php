@@ -13,4 +13,8 @@ Template Name: Contact Us
         <h1 class="page-section-top-h1 cursor-color-none">Contact Us</h1>
     </section>
 
+    <div class="commingsoon">
+        <h1>Coming Soon</h1>
+    </div>
+
 <?php get_footer(); ?>

@@ -973,6 +973,15 @@ p {
   font-weight: 600px;
 }
 
+.commingsoon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* cards container css end */
 
 /* responsive */
@@ -1430,6 +1439,11 @@ p {
   .page-article .page-article-title {
     font-size: 22px;
     text-align: center;
+  }
+
+  .imageDiv {
+    width: 100%;
+    height: 225px;
   }
 
   .page-article .page-article-img {

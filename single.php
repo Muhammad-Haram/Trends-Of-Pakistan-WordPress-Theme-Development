@@ -16,7 +16,7 @@
           <?php
               $categories = get_the_category();
               foreach ($categories as $cat):
-              if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
+              if ($cat->name === 'topslider' || $cat->name === 'Trending News') {
               continue;
               }
               ?>
@@ -121,8 +121,7 @@
                               <?php
                                    $categories = get_the_category();
                                    foreach ($categories as $cat):
-                                       // Skip 'Tending News' and 'Top Slider' categories
-                                       if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
+                                       if ($cat->name === 'topslider' || $cat->name === 'Trending News') {
                                            continue;
                                        }
                                        ?>

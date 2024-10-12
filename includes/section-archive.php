@@ -1,3 +1,27 @@
+
+<?php
+$category = get_queried_object();
+$category_slug = $category->slug;
+
+$category_images = array(
+    'sports' => 'http://trendsofpk.test/wp-content/uploads/2024/10/sports.png',
+    'health' => 'http://trendsofpk.test/wp-content/uploads/2024/10/health.png',
+    'politics' => 'http://trendsofpk.test/wp-content/uploads/2024/10/poiltics.png',
+    'tech-and-telecom' => 'http://trendsofpk.test/wp-content/uploads/2024/10/tech.png',
+    'entertainment' => 'http://trendsofpk.test/wp-content/uploads/2024/10/travel.png',
+    'food' => 'http://trendsofpk.test/wp-content/uploads/2024/10/food.png',
+    'entertainment' => 'http://trendsofpk.test/wp-content/uploads/2024/10/entert.png',
+    'education' => 'http://trendsofpk.test/wp-content/uploads/2024/10/education.png',
+    'business' => 'http://trendsofpk.test/wp-content/uploads/2024/10/business.png',
+);
+
+$image_url = isset($category_images[$category_slug]) ? $category_images[$category_slug] : 'https://cdn.pixabay.com/photo/2016/04/24/22/30/monitor-1350918_960_720.png';
+?>
+
+<section class="page-section-top cursor-color-white topic-text" data-img="<?php echo esc_url($image_url); ?>">
+    <h1 class="page-section-top-h1 cursor-color-none"><?php single_cat_title(); ?></h1>
+</section>
+
 <div class="pageNews-container">
       <div class="pageNews-article">
 <?php if(have_posts() ): while(have_posts() ): the_post();?>
@@ -25,7 +49,7 @@
     <?php
     $categories = get_the_category();
     foreach ($categories as $cat):
-    if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
+    if ($cat->name === 'topslider' || $cat->name === 'Trending News') {
         continue;
     }
     ?>
@@ -90,8 +114,7 @@
                             <?php
                                    $categories = get_the_category();
                                    foreach ($categories as $cat):
-                                       // Skip 'Tending News' and 'Top Slider' categories
-                                       if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
+                                       if ($cat->name === 'topslider' || $cat->name === 'Trending News') {
                                            continue;
                                        }
                                        ?>

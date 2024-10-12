@@ -120,7 +120,7 @@
       $top_news_query = new WP_Query(array(
           'post_type' => 'post',
           'posts_per_page' => 1, // Get only the top post
-          'category_name' => 'Tending News', // Adjust the category slug as needed
+          'category_name' => 'Trending News', // Adjust the category slug as needed
       ));
       
       if ($top_news_query->have_posts()) :
@@ -133,7 +133,7 @@
                   <?php
                   $categories = get_the_category();
                   foreach ($categories as $cat):
-                    if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
+                    if ($cat->name === 'topslider' || $cat->name === 'Trending News') {
                       continue;
                   }
                   ?>
@@ -166,7 +166,7 @@
       $other_news_query = new WP_Query(array(
           'post_type' => 'post',
           'posts_per_page' => 3, // Get the next 3 posts
-          'category_name' => 'Tending News', // Adjust the category slug as needed
+          'category_name' => 'Trending News', // Adjust the category slug as needed
           'offset' => 1, // Skip the first post
       ));
 
@@ -185,7 +185,7 @@
                       <?php
                       $categories = get_the_category();
                       foreach ($categories as $cat):
-                        if ($cat->name === 'topslider' || $cat->name === 'Tending News') {
+                        if ($cat->name === 'topslider' || $cat->name === 'Trending News') {
                           continue;
                       }
                       ?>
